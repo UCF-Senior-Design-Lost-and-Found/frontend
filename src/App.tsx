@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    if(count === 69){
+      alert('NICE');
+    }
+  }, [count])
+
   return (
-    <div className="flex h-screen items-center justify-center">
-      <button className="border p-2 rounded-md" onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+    <div className="flex h-screen items-center justify-center bg-slate-500">
+      <button 
+        className="border shadow-md p-2 rounded-md bg-white" 
+        onClick={() => {setCount((count) => count + 1)}}
+      >
+          Count is {count}
+      </button>
     </div>
   );
 }
