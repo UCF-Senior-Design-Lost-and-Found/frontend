@@ -16,7 +16,8 @@ jobs:
         uses: actions/setup-node@v3.6.0
         with:
           node-version: 16
-        run: npm ci
+        
+      - run: npm ci
 
       - name: Install Dependencies
         run: npm install
