@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout branch
       - uses: actions/checkout@v3
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.6.0
         with:
           node-version: 16
-        
-      - run: npm ci
+        run: npm ci
 
       - name: Install Dependencies
         run: npm install
